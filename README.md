@@ -1,6 +1,6 @@
 ## Incubadora Automatizada con Arduino (Edición 2016 / Mejorado) 🌡️🥚
 
-Este proyecto nació originalmente en **2016** como un proyecto final. Decidí rescatarlo de mis archivos para sumarlo a mi portafolio y darle una actualización completa, aplicando nuevas mejoras en el circuito y en el código.
+Este proyecto nació originalmente en **2016** como un proyecto escolar. Decidí rescatarlo de mis archivos para sumarlo a mi portafolio y darle una actualización completa, aplicando nuevas mejoras en el circuito y en el código.
 
 ## 🚀 Pruébalo en vivo (Simulador Web)
 No necesitas tener las piezas en físico para ver cómo funciona. Puedes entrar a la simulación interactiva desde tu navegador:
