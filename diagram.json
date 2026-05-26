@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "Luis Mario Muñetón Pando",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -124.2, "left": -240.6, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -316.5, "left": -149.4, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 9.8, "left": 153.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -156.8,
+      "left": 111.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -13.2,
+      "left": 330.2,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.15,
+      "left": 278.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "dht1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "dht1:SDA", "uno:2", "limegreen", [ "v0" ] ],
+    [ "dht1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "dht1:VCC", "relay1:VCC", "red", [ "v0" ] ],
+    [ "dht1:GND", "relay1:GND", "black", [ "v0" ] ],
+    [ "relay1:IN", "uno:3", "green", [ "h0" ] ],
+    [ "dht1:VCC", "lcd1:VCC", "red", [ "v0" ] ],
+    [ "dht1:GND", "lcd1:GND", "black", [ "v0" ] ],
+    [ "uno:A4", "lcd1:SDA", "blue", [ "v0" ] ],
+    [ "uno:A5", "lcd1:SCL", "blue", [ "v0" ] ],
+    [ "dht1:VCC", "relay1:COM", "red", [ "v0" ] ],
+    [ "led1:C", "r1:2", "black", [ "v0" ] ],
+    [ "r1:1", "uno:GND.2", "black", [ "h-349.5" ] ],
+    [ "led1:A", "relay1:NO", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
